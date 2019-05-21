@@ -1,9 +1,10 @@
 /**
- * 判断用户设备和浏览器
+ * 获取用户设备、浏览器的型号、版本等代理信息
+ * 应用场景: 匹配用户代理信息
  *
  * @return {Object}
  */
-const userDevices = (function userDevices() {
+const userAgent = (function userAgent() {
   const ua = window.navigator.userAgent;
   const isWeixin = Boolean(ua.match(/MicroMessenger\/([^\s]+)/i)),
     isWebkit = Boolean(ua.match(/WebKit\/([\d.]+)/i)),
@@ -44,11 +45,11 @@ const userDevices = (function userDevices() {
 })();
 
 /**
- * 查询用户的设备和浏览器
+ * 匹配用户设备、浏览器的型号、版本等代理信息
  *
  * @return {Array}
  */
-const findUserDevices = (() =>
-  Object.keys(userDevices).filter(item => userDevices[item]))();
+const matchUserAgent = (() =>
+  Object.keys(userAgent).filter(item => userAgent[item]))();
 
-export { userDevices, findUserDevices };
+export { userAgent, matchUserAgent };

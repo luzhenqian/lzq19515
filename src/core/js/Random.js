@@ -5,8 +5,8 @@
  * @return {string} 随机字符串
  */
 function genRandomString(len) {
-  if (typeof parseInt(len) !== "number") {
-    console.error("传入参数不能转换成number.");
+  if (isFinite(parseInt(len))) {
+    console.error("传入参数不是有效number.");
     return "";
   }
   const _text = "abcdefghijklmnopqrstuvwxyz0123456789";

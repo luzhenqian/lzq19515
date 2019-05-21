@@ -1,8 +1,7 @@
-import { isDOM } from "../dom/IsDOM";
-import { destroyElement } from "../dom/DestroyElement";
+import { isDOM, destroyElement } from "./DOM";
 
 /**
- * 复制文本到剪切板
+ * 拷贝到剪切板
  * ! 此函数在页面初始化时不可用.
  *
  * @param {string|number|object|Array|Element} target - 要复制的内容
@@ -15,7 +14,7 @@ function copyToClipboard(target, separator) {
     console.warn("请传入要复制的内容.");
     return false;
   }
-  if (typeof target === "string" || typeof target === "number") {
+  if (typeof target === "string" || isFinite(target)) {
     _target = target;
   } else if (typeof target === "object") {
     if (Array.isArray(target)) {
