@@ -1,5 +1,6 @@
 /**
  * 判断用户设备和浏览器
+ *
  * @return {Object}
  */
 const userDevices = (function userDevices() {
@@ -44,6 +45,7 @@ const userDevices = (function userDevices() {
 
 /**
  * 查询用户的设备和浏览器
+ *
  * @return {Array}
  */
 const findUserDevices = (() =>
