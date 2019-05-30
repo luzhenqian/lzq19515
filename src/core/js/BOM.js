@@ -6,6 +6,17 @@
  */
 const userAgent = (function userAgent() {
   const ua = window.navigator.userAgent;
+  //  浏览器
+  //  opera
+  //  firefox
+  //  safari
+  //  chrome
+  //  360
+  //  淘宝
+  //  猎豹
+  //  QQ
+  //  sougou
+  //  uc
   const isWeixin = Boolean(ua.match(/MicroMessenger\/([^\s]+)/i)),
     isWebkit = Boolean(ua.match(/WebKit\/([\d.]+)/i)),
     isAndroid = Boolean(ua.match(/(Android)\s+([\d.]+)/i)),

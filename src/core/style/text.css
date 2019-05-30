@@ -1,4 +1,4 @@
-.overflow-ellipsis-line3 {
+.text-overflow--ellipsis-line3 {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
